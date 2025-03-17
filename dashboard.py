@@ -5,15 +5,15 @@ import seaborn as sns
 import matplotlib.dates as mdates
 
 # Load dataset
-day_update = pd.read_csv("dashboard/day_update.csv")
-hour_update = pd.read_csv("dashboard/hour_update.csv")
+day_update = pd.read_csv("day_update.csv")
+hour_update = pd.read_csv("hour_update.csv")
 
 # Konversi kolom tanggal ke datetime
 day_update["dteday"] = pd.to_datetime(day_update["dteday"])
 hour_update["date"] = pd.to_datetime(hour_update["date"])
 
 # Tambahkan gambar sebagai header
-st.image("dashboard/image.jpg", use_container_width=True)
+st.image("image.jpg", use_container_width=True)
 
 # --- SIDEBAR FILTER ---
 st.sidebar.header("Filter Data")
